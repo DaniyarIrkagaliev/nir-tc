@@ -10,6 +10,17 @@
 
   <repositories>
     <repository>
+      <id>teamcity-main</id>
+      <url>https://download.jetbrains.com/teamcity-repository</url>
+    </repository>
+    
+    <!-- Альтернативный репозиторий Maven -->
+    <repository>
+      <id>maven-central</id>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+    
+    <repository>
       <id>teamcity-server</id>
       <url>http://90.156.226.35:8111/httpAuth/repository/download/TeamCityPluginsAndPackages/</url>
       <releases>
@@ -19,9 +30,19 @@
         <enabled>false</enabled>
       </snapshots>
     </repository>
+    
   </repositories>
 
+
   <dependencies>
+    <dependency>
+      <groupId>org.jetbrains.teamcity</groupId>
+      <artifactId>teamcity-configs-dsl-support</artifactId>
+      <version>${teamcity.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Дополнительные зависимости -->
     <dependency>
       <groupId>org.jetbrains.teamcity.internal</groupId>
       <artifactId>teamcity-configs-dsl-dependencies</artifactId>
@@ -29,4 +50,5 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
+  
 </project>
