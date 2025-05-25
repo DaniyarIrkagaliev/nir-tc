@@ -1,4 +1,4 @@
-version = "2023.05"
+version = "2024.03"
 
 // 1. Сначала объявляем VCS root
 vcsRoot {
