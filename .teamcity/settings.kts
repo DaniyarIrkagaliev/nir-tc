@@ -12,6 +12,11 @@ vcsRoot {
 
 // 2. Затем объявляем проект
 project {
+    versionedSettings {
+        vcsRootId = "NirTc_HttpsGithubComDaniyarIrkagalievNirTc"
+        settingsFormat = VersionedSettings.Format.KOTLIN
+        buildSettingsMode = VersionedSettings.BuildSettingsMode.PREFER_VCS
+    }
     buildType {
         id("ExampleBuild")
         name("Example Build")
