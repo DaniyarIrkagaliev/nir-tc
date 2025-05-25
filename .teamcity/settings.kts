@@ -1,4 +1,4 @@
-version = "2024.12"
+version = "2024.12.2"
 
 // 1. Сначала объявляем VCS root
 vcsRoot {
@@ -12,6 +12,15 @@ vcsRoot {
 
 // 2. Затем объявляем проект
 project {
-    // Настройки проекта будут автоматически подхватывать .kts файлы
-    // из указанного VCS root
+    buildType {
+        id("ExampleBuild")
+        name("Example Build")
+        steps {
+            script {
+                name = "Test Step"
+                scriptContent = "echo 'Hello from TeamCity'"
+            }
+        }
+    }
 }
+
