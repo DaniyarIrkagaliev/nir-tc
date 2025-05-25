@@ -1,7 +1,20 @@
-<!-- pom.xml -->
-<dependency>
-  <groupId>org.jetbrains.teamcity</groupId>
-  <artifactId>teamcity-configs-dsl-support</artifactId>
-  <version>2023.05</version>
-  <scope>provided</scope>
-</dependency>
+<!-- .teamcity/pom.xml -->
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.example</groupId>
+  <artifactId>teamcity-config</artifactId>
+  <version>1.0</version>
+  
+  <properties>
+    <teamcity.version>2023.05</teamcity.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.jetbrains.teamcity</groupId>
+      <artifactId>teamcity-configs-dsl-support</artifactId>
+      <version>${teamcity.version}</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+</project>
