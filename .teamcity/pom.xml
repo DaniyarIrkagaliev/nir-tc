@@ -4,10 +4,20 @@
   <artifactId>teamcity-config</artifactId>
   <version>1.0</version>
 
+  <properties>
+    <teamcity.version>2024.12</teamcity.version> <!-- Без точки и патча -->
+  </properties>
+
   <repositories>
     <repository>
-      <id>teamcity-server-repository</id>
-      <url>http://90.156.226.35:8111/guestAuth/repository/downloadAll/TeamCityPluginsAndPackages/</url>
+      <id>teamcity-server</id>
+      <url>http://90.156.226.35:8111/httpAuth/repository/download/TeamCityPluginsAndPackages/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
     </repository>
   </repositories>
 
@@ -15,7 +25,7 @@
     <dependency>
       <groupId>org.jetbrains.teamcity.internal</groupId>
       <artifactId>teamcity-configs-dsl-dependencies</artifactId>
-      <version>%teamcity.version%</version>
+      <version>${teamcity.version}</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
