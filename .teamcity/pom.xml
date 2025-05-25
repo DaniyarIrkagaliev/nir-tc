@@ -1,19 +1,21 @@
-<!-- .teamcity/pom.xml -->
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.example</groupId>
+  <groupId>your.project</groupId>
   <artifactId>teamcity-config</artifactId>
   <version>1.0</version>
-  
-  <properties>
-    <teamcity.version>2023.05</teamcity.version>
-  </properties>
+
+  <repositories>
+    <repository>
+      <id>teamcity-server-repository</id>
+      <url>http://90.156.226.35:8111/guestAuth/repository/downloadAll/TeamCityPluginsAndPackages/</url>
+    </repository>
+  </repositories>
 
   <dependencies>
     <dependency>
-      <groupId>org.jetbrains.teamcity</groupId>
-      <artifactId>teamcity-configs-dsl-support</artifactId>
-      <version>${teamcity.version}</version>
+      <groupId>org.jetbrains.teamcity.internal</groupId>
+      <artifactId>teamcity-configs-dsl-dependencies</artifactId>
+      <version>%teamcity.version%</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
