@@ -3,7 +3,7 @@ import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.buildFeatures.sshAgent
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
-version = "2024.12.2"
+version = "2024.12"
 
 project {
     buildType {
