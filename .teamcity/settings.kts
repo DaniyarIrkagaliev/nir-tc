@@ -1,15 +1,16 @@
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildSteps.csharpScript
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
+/* some comment text */
+version = "2024.12.2"
 
-object Build : BuildType({
-    name = "Build"
-    // ...
+project {
+  buildType {
+    id("HelloWorld")
+    name = "Hello world"
     steps {
-        csharpScript {
-            id = "csharpScript"
-            content = """Console.WriteLine("Running a CSharp script...");"""
-            tool = "%\teamcity.tool.TeamCity.csi.DEFAULT%"
+        script {
+            scriptContent = "echo 'Hello world!'"
         }
     }
-    // ...
-})
+  }
+}
